@@ -1,0 +1,39 @@
+name: Cookie
+description:
+  A Flutter project showcasing supported Material 3 components, typography, color system and elevation.
+  Supports different light/dark mode, color seed, and comparison to Material 2.
+
+publish_to: "none"
+
+version: 23.0.0+23
+
+environment:
+  sdk: ">=2.17.0-0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.4
+  dio: ^5.0.3
+  shared_preferences: ^2.0.20
+  in_app_purchase: ^3.1.5
+  intl: ^0.18.0
+  google_sign_in: ^6.0.2
+  sign_button: ^2.0.3
+  webview_flutter: ^4.0.7
+  url_launcher: ^6.1.10
+  timeline_tile: ^2.0.0
+  facebook_audience_network: ^1.0.1
+  flutter_isolate: ^2.0.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
