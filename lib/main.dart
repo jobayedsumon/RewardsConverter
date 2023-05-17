@@ -31,7 +31,7 @@ class _CookieAppState extends State<CookieApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Cookie',
+      title: 'Cookie - reward converter',
       themeMode: ThemeMode.light,
       theme: ThemeData(colorSchemeSeed: Colors.red, useMaterial3: true),
       routes: {
