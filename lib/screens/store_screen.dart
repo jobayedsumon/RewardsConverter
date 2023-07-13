@@ -24,7 +24,17 @@ class _StoreScreenState extends State<StoreScreen> {
   List cookiePackages = [];
   var dio = DioUtil.getInstance();
   late StreamSubscription<dynamic> _subscription;
-  Set<String> skuIds = {'30', '90', '120', '150', '330', '660', '1320', '3300'};
+  Set<String> skuIds = {
+    '22',
+    '44',
+    '66',
+    '88',
+    '110',
+    '220',
+    '440',
+    '880',
+    '2200'
+  };
   bool isLoading = false;
   double balance = 0.0;
 

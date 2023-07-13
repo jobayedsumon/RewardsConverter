@@ -1,4 +1,3 @@
-import 'package:Cookie/screens/add_example_screen.dart';
 import 'package:Cookie/screens/initial_screen.dart';
 import 'package:Cookie/screens/login_screen.dart';
 import 'package:Cookie/screens/profile/profile_info_screen.dart';
@@ -35,7 +34,6 @@ class _CookieAppState extends State<CookieApp> {
       themeMode: ThemeMode.light,
       theme: ThemeData(colorSchemeSeed: Colors.red, useMaterial3: true),
       routes: {
-        '/ad-example': (context) => AdExampleApp(),
         '/profile-info': (context) => ProfileInfoScreen(),
         '/login': (context) => LoginScreen(),
         '/about-us': (context) => AboutUsScreen(),

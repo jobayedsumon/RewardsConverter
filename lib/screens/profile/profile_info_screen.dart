@@ -6,10 +6,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 const payoutOptions = [
+  // {
+  //   'id': 1,
+  //   'name': 'Paypal',
+  //   'icon': Icons.paypal,
+  // },
   {
-    'id': 1,
-    'name': 'Paypal',
-    'icon': Icons.paypal,
+    'id': 3,
+    'name': 'Bkash',
+    'icon': Icons.payment,
+  },
+  {
+    'id': 4,
+    'name': 'Nagad',
+    'icon': Icons.payments,
   },
   {
     'id': 2,
@@ -49,7 +59,7 @@ class _ProfileInfoScreenState extends State<ProfileInfoScreen> {
     phoneController.text = userData['phone_number'] ?? '';
     beneficiaryNameController.text = userData['beneficiary_name'] ?? '';
     payoutIdController.text = userData['payout_id'] ?? '';
-    _selectedPayoutOption = userData['payout_method'] ?? 1;
+    _selectedPayoutOption = userData['payout_method'] ?? 2;
   }
 
   @override
@@ -203,7 +213,7 @@ class _ProfileInfoScreenState extends State<ProfileInfoScreen> {
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
                                       children: [
-                                        Icon(Icons.payment, size: 20.0),
+                                        Icon(Icons.attach_money, size: 20.0),
                                         SizedBox(width: 15.0),
                                         Expanded(
                                           child: Container(
@@ -278,9 +288,16 @@ class _ProfileInfoScreenState extends State<ProfileInfoScreen> {
                                     TextField(
                                       controller: payoutIdController,
                                       decoration: InputDecoration(
-                                        labelText:
-                                            '${_selectedPayoutOption == 1 ? 'Paypal' : 'Binance Pay '} ID or Email',
-                                        icon: Icon(Icons.email),
+                                        labelText: _selectedPayoutOption == 3
+                                            ? 'Bkash Wallet Number'
+                                            : _selectedPayoutOption == 4
+                                                ? 'Nagad Wallet Number'
+                                                : 'Binance Pay ID or Email',
+                                        icon: Icon(
+                                          _selectedPayoutOption == 2
+                                              ? Icons.email
+                                              : Icons.phone_android,
+                                        ),
                                         border: OutlineInputBorder(
                                           borderRadius:
                                               BorderRadius.circular(50.0),

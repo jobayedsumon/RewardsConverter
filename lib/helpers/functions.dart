@@ -1,4 +1,6 @@
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:unity_ads_plugin/unity_ads_plugin.dart';
+import 'constants.dart';
 import 'dioUtil.dart';
 
 isUserLoggedIn() async {
@@ -46,4 +48,13 @@ logout() async {
     print(e);
     return false;
   }
+}
+
+initializeAd() {
+  UnityAds.init(
+    gameId: ANDROID_GAME_ID,
+    onComplete: () => print('Initialization Complete'),
+    onFailed: (error, message) =>
+        print('Initialization Failed: $error $message'),
+  );
 }

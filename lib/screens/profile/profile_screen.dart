@@ -3,9 +3,12 @@ import 'package:Cookie/includes/CookieAppBar.dart';
 import 'package:Cookie/screens/profile/profile_info_screen.dart';
 import 'package:Cookie/screens/store_screen.dart';
 import 'package:flutter/material.dart';
+import '../../components/BannerAd.dart';
 import '../../components/CustomerAvatar.dart';
+import '../../helpers/constants.dart';
 import '../../helpers/dioUtil.dart';
 import '../../helpers/functions.dart';
+import 'package:unity_ads_plugin/unity_ads_plugin.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -19,6 +22,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   var dio = DioUtil.getInstance();
   bool isLoading = true;
   double balance = 0.0;
+  String usdToBDT = '0.00';
 
   void getProfileData() async {
     try {
@@ -31,6 +35,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           profileData = user;
           isLoading = false;
           balance = user['balance'].toDouble();
+          usdToBDT = data['usd_to_bdt'];
         });
         await setBalance(user['balance'].toDouble());
       }
@@ -48,6 +53,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       });
     });
     getProfileData();
+    initializeAd();
   }
 
   @override
@@ -115,12 +121,23 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            Text(
-                              '100 Cookies ~ 1 USD',
-                              style: TextStyle(
-                                fontSize: 12.0,
-                                color: Colors.grey.shade800,
-                              ),
+                            Column(
+                              children: [
+                                Text(
+                                  '100 Cookies ~ 1 USD',
+                                  style: TextStyle(
+                                    fontSize: 12.0,
+                                    color: Colors.grey.shade800,
+                                  ),
+                                ),
+                                Text(
+                                  '1 USD ~ ${usdToBDT} BDT',
+                                  style: TextStyle(
+                                    fontSize: 12.0,
+                                    color: Colors.grey.shade800,
+                                  ),
+                                )
+                              ],
                             ),
                           ],
                         ),
@@ -303,6 +320,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                   ),
                 ],
+              ),
+              SizedBox(height: 10.0),
+              Row(
+                children: [BannerAd()],
               )
             ],
           ),

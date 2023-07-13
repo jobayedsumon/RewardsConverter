@@ -1,11 +1,10 @@
 name: Cookie
 description:
-  A Flutter project showcasing supported Material 3 components, typography, color system and elevation.
-  Supports different light/dark mode, color seed, and comparison to Material 2.
+  Cookie is a mobile application that allows users convert google play credit to cash.
 
 publish_to: "none"
 
-version: 23.0.0+23
+version: 28.0.0+28
 
 environment:
   sdk: ">=2.17.0-0 <3.0.0"
@@ -24,8 +23,7 @@ dependencies:
   webview_flutter: ^4.0.7
   url_launcher: ^6.1.10
   timeline_tile: ^2.0.0
-  facebook_audience_network: ^1.0.1
-  flutter_isolate: ^2.0.4
+  unity_ads_plugin: ^0.3.8
 
 dev_dependencies:
   flutter_test:

@@ -27,10 +27,19 @@ class _WithdrawalModalState extends State<WithdrawalModal> {
   @override
   Widget build(BuildContext context) {
     String payoutMethod = '';
-    if (widget.profileData['payout_method'] == 1) {
-      payoutMethod = 'PayPal';
-    } else if (widget.profileData['payout_method'] == 2) {
-      payoutMethod = 'Tether (USDT) - Binance.com';
+
+    switch (widget.profileData['payout_method']) {
+      case 2:
+        payoutMethod = 'Tether (USDT) - Binance.com';
+        break;
+      case 3:
+        payoutMethod = 'Bkash';
+        break;
+      case 4:
+        payoutMethod = 'Nagad';
+        break;
+      default:
+        payoutMethod = '';
     }
 
     return Container(
@@ -48,7 +57,8 @@ class _WithdrawalModalState extends State<WithdrawalModal> {
             SizedBox(height: 10.0),
             Text('Payout Method: ${payoutMethod}',
                 style: TextStyle(fontWeight: FontWeight.w500)),
-            Text('Payout ID: ${widget.profileData['payout_id'] ?? ''}',
+            Text(
+                '${widget.profileData['payout_method'] == 2 ? 'Binance Pay ID' : widget.profileData['payout_method'] == 3 ? 'Bkash Number' : widget.profileData['payout_method'] == 4 ? 'Nagad Number' : ''}: ${widget.profileData['payout_id'] ?? ''}',
                 style: TextStyle(fontWeight: FontWeight.w500)),
             Text('Beneficiary: ${widget.profileData['beneficiary_name'] ?? ''}',
                 style: TextStyle(fontWeight: FontWeight.w500)),
