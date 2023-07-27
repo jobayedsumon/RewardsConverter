@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:Cookie/components/WithdrawalModal.dart';
 import 'package:Cookie/includes/CookieAppBar.dart';
 import 'package:Cookie/screens/profile/profile_info_screen.dart';
@@ -35,7 +37,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
           profileData = user;
           isLoading = false;
           balance = user['balance'].toDouble();
-          usdToBDT = data['usd_to_bdt'];
         });
         await setBalance(user['balance'].toDouble());
       }
@@ -51,6 +52,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
       setState(() {
         balance = value;
       });
+    });
+    getSettings().then((value) {
+      var settings = jsonDecode(value);
+      var result = settings.where((item) => item['key'] == 'usd_to_bdt')?.first;
+      if (result != null) {
+        setState(() {
+          usdToBDT = result['value'].toString();
+        });
+      }
     });
     getProfileData();
     initializeAd();

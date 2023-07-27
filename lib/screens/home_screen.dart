@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:convert';
 import 'package:Cookie/components/BannerAd.dart';
 import 'package:Cookie/helpers/alerts.dart';
 import 'package:Cookie/helpers/constants.dart';
@@ -24,6 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
   bool _isRewardedAdLoaded = false;
   var dio = DioUtil.getInstance();
   double balance = 0.0;
+  String bonus = '0';
 
   bool _buttonEnabled = true;
   Duration _remainingTime = Duration.zero;
@@ -39,6 +41,16 @@ class _HomeScreenState extends State<HomeScreen> {
       setState(() {
         balance = value;
       });
+    });
+
+    getSettings().then((value) {
+      var settings = jsonDecode(value);
+      var result = settings.where((item) => item['key'] == 'bonus')?.first;
+      if (result != null) {
+        setState(() {
+          bonus = result['value'].toString();
+        });
+      }
     });
 
     _loadRewardedVideoAd();
@@ -163,9 +175,16 @@ class _HomeScreenState extends State<HomeScreen> {
                         '3. In the Withdraw Page, enter cookies and click on Withdraw button.'),
                     _colDivider,
                     _colDivider,
+                    Text('All Payments will be completed within 72 hours.'),
                     Text(
-                        'Note: You will receive 60% of the amount you have converted. '
-                        'It will take 4 - 6 days to credit the amount into your account.'),
+                      bonus != '0'
+                          ? 'Enjoy $bonus% extra bonus on your purchase.'
+                          : '',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.red[900],
+                      ),
+                    ),
                   ],
                 ),
               ),

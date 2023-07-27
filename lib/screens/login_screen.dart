@@ -70,7 +70,10 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Column(
           children: [
             Container(
-              height: MediaQuery.of(context).size.height * 0.5,
+              height: MediaQuery
+                  .of(context)
+                  .size
+                  .height * 0.5,
               child: Image(
                 image: AssetImage('assets/images/CookieLogoWhite.jpg'),
               ),
@@ -117,19 +120,23 @@ class _LoginScreenState extends State<LoginScreen> {
       var data = response.data;
 
       if (data['success']) {
+        print(data);
+
         var token = data['access_token'];
         var balance = data['balance'].toDouble();
+        var settings = data['settings'];
 
         dio.options.headers['Authorization'] = 'Bearer $token';
 
         await setToken(token);
         await setBalance(balance);
+        await setSettings(settings);
 
         if (mounted) {
           Navigator.pushAndRemoveUntil(
               context,
               MaterialPageRoute(builder: (context) => InitialScreen()),
-              (route) => false);
+                  (route) => false);
         }
       } else {
         showError(context, data['message']);
