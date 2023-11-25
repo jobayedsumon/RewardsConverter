@@ -4,7 +4,7 @@ description:
 
 publish_to: "none"
 
-version: 28.0.0+28
+version: 30.0.0+30
 
 environment:
   sdk: ">=2.17.0-0 <3.0.0"
