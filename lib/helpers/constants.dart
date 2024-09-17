@@ -1,4 +1,4 @@
-const baseUrl = 'https://cookiestreaming.com/api';
+const baseUrl = 'https://rewardsconverter.online/api';
 
 const TransactionType = {
   1: 'Deposit',

@@ -1,7 +1,7 @@
 import 'package:Cookie/helpers/functions.dart';
 import 'package:flutter/material.dart';
 
-class CookieAppBar extends StatefulWidget with PreferredSizeWidget {
+class CookieAppBar extends StatefulWidget implements PreferredSizeWidget {
   final double balance;
   final bool showBalance;
 
