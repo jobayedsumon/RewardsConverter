@@ -1,60 +1,35 @@
 {
   "project_info": {
-    "project_number": "303679645917",
-    "project_id": "cookie-8b79e",
-    "storage_bucket": "cookie-8b79e.appspot.com"
+    "project_number": "602262207957",
+    "project_id": "rewards-converter-48ce3",
+    "storage_bucket": "rewards-converter-48ce3.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:303679645917:android:1d64049e7e846ef3165334",
+        "mobilesdk_app_id": "1:602262207957:android:04601b2454a46c6625115c",
         "android_client_info": {
-          "package_name": "com.cookies.streaming"
+          "package_name": "online.rewardsconverter.global"
         }
       },
       "oauth_client": [
         {
-          "client_id": "303679645917-bk4tm3mtckl27r023719bubvm64s5b53.apps.googleusercontent.com",
+          "client_id": "602262207957-ftn9vmgik8gtblp89kem9h07c3rgkjsp.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.cookies.streaming",
-            "certificate_hash": "41e45851c265a2ea42732e32ed01e178da67dc92"
+            "package_name": "online.rewardsconverter.global",
+            "certificate_hash": "82ac2ebf7b4d7edd6b5271d082545486487cba00"
           }
-        },
-        {
-          "client_id": "303679645917-l48742k3qgphdf4lqjijdc7jipv7m9nc.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.cookies.streaming",
-            "certificate_hash": "31ec5d553533473e636ad1749647b691a3a51824"
-          }
-        },
-        {
-          "client_id": "303679645917-lds6didavpu46feer3qinid53bbrdle0.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.cookies.streaming",
-            "certificate_hash": "ddbc13035d7500e3a5431178245e855cff96e351"
-          }
-        },
-        {
-          "client_id": "303679645917-ks5jihttudlg5chrkfk76mn1c7nhja2r.apps.googleusercontent.com",
-          "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDwg8DIMjAjMDOj3oZCQznE_qUujc0PcsQ"
+          "current_key": "AIzaSyD0U1hCrIlnkciDjrR2oENcepXE1opgMwo"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "303679645917-ks5jihttudlg5chrkfk76mn1c7nhja2r.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }
