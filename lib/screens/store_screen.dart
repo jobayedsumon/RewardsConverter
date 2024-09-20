@@ -25,15 +25,15 @@ class _StoreScreenState extends State<StoreScreen> {
   var dio = DioUtil.getInstance();
   late StreamSubscription<dynamic> _subscription;
   Set<String> skuIds = {
-    '22',
-    '44',
-    '66',
-    '88',
-    '110',
-    '220',
-    '440',
-    '880',
-    '2200'
+    '25',
+    '50',
+    '75',
+    '100',
+    '125',
+    '250',
+    '500',
+    '1000',
+    '2500',
   };
   bool isLoading = false;
   double balance = 0.0;

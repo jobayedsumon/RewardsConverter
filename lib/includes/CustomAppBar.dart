@@ -42,7 +42,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
                 )
               ],
             ),
-            backgroundColor: Colors.red[900],
+            backgroundColor: Colors.white,
             actions: [],
           )
         : AppBar(

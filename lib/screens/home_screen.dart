@@ -169,61 +169,59 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Text('1. Go to Store Section and Buy Rewards')),
                     _colDivider,
                     Text(
-                        '2. For Redeem Rewards, Go to Profile section and Click on Withdraw.'),
+                        '2. For Redeeming Rewards, Go to Profile section and Click on Withdraw.'),
                     _colDivider,
                     Text(
                         '3. In the Withdraw Page, enter rewards and click on Withdraw button.'),
                     _colDivider,
                     _colDivider,
                     Text('All Payments will be completed within 72 hours.'),
-                    Text(
-                      bonus != '0'
-                          ? 'Enjoy $bonus% extra bonus on your purchase.'
-                          : '',
+                    bonus != '0' ?
+                    Text('\nEnjoy $bonus% extra bonus on your purchase.',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.red[900],
                       ),
-                    ),
+                    ) : SizedBox(),
                   ],
                 ),
               ),
             ),
           ),
         ),
-        Expanded(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ElevatedButton(
-                  onPressed: _isRewardedAdLoaded ? _showRewardedAd : null,
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.red[900],
-                    foregroundColor: Colors.white,
-                    padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
-                  ),
-                  child:
-                      // _isRewardedAdLoaded
-                      //     ?
-                      Text(
-                    "TRY YOUR LUCK!",
-                    style: TextStyle(
-                      fontSize: 18.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  )
-                  //   : Text(
-                  // (_remainingTime.inSeconds > 0
-                  //     ? 'Please wait ${_remainingTime
-                  //     .inMinutes}:${_remainingTime.inSeconds.remainder(
-                  //     60)} minutes to try again!'
-                  //     :
-                  // 'Loading...'),
-                  ),
-            ],
-          ),
-        ),
-        BannerAd()
+        // Expanded(
+        //   child: Row(
+        //     mainAxisAlignment: MainAxisAlignment.center,
+        //     children: [
+        //       ElevatedButton(
+        //           onPressed: _isRewardedAdLoaded ? _showRewardedAd : null,
+        //           style: ElevatedButton.styleFrom(
+        //             backgroundColor: Colors.red[900],
+        //             foregroundColor: Colors.white,
+        //             padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+        //           ),
+        //           child:
+        //               // _isRewardedAdLoaded
+        //               //     ?
+        //               Text(
+        //             "TRY YOUR LUCK!",
+        //             style: TextStyle(
+        //               fontSize: 18.0,
+        //               fontWeight: FontWeight.bold,
+        //             ),
+        //           )
+        //           //   : Text(
+        //           // (_remainingTime.inSeconds > 0
+        //           //     ? 'Please wait ${_remainingTime
+        //           //     .inMinutes}:${_remainingTime.inSeconds.remainder(
+        //           //     60)} minutes to try again!'
+        //           //     :
+        //           // 'Loading...'),
+        //           ),
+        //     ],
+        //   ),
+        // ),
+        // BannerAd()
       ]),
     );
   }
