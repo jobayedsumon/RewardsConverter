@@ -1,13 +1,13 @@
 import 'dart:async';
 import 'dart:convert';
-import 'package:Cookie/helpers/functions.dart';
-import 'package:Cookie/includes/CookieAppBar.dart';
+import 'package:rewards_converter/helpers/functions.dart';
+import 'package:rewards_converter/includes/CustomAppBar.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:in_app_purchase_android/in_app_purchase_android.dart';
 import 'package:in_app_purchase_android/billing_client_wrappers.dart';
-import '../components/CookieChip.dart';
+import '../components/CustomChip.dart';
 import '../helpers/alerts.dart';
 import '../helpers/dioUtil.dart';
 
@@ -191,7 +191,7 @@ class _StoreScreenState extends State<StoreScreen> {
                             children: cookiePackages
                                 .take((cookiePackages.length ~/ 2))
                                 .map(
-                                  (package) => CookieChip(package: package),
+                                  (package) => CustomChip(package: package),
                                 )
                                 .toList(),
                           )
@@ -207,7 +207,7 @@ class _StoreScreenState extends State<StoreScreen> {
                           Column(
                             children: cookiePackages
                                 .skip((cookiePackages.length ~/ 2))
-                                .map((package) => CookieChip(package: package))
+                                .map((package) => CustomChip(package: package))
                                 .toList(),
                           ),
                         ],

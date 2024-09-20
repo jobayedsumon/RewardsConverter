@@ -1,10 +1,10 @@
-import 'package:Cookie/helpers/functions.dart';
-import 'package:Cookie/includes/CookieAppBar.dart';
-import 'package:Cookie/screens/profile/profile_screen.dart';
-import 'package:Cookie/screens/store_screen.dart';
+import 'package:rewards_converter/helpers/functions.dart';
+import 'package:rewards_converter/includes/CustomAppBar.dart';
+import 'package:rewards_converter/screens/profile/profile_screen.dart';
+import 'package:rewards_converter/screens/store_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../includes/CookieNavigationBar.dart';
+import '../includes/CustomNavigationBar.dart';
 import 'transaction/history_screen.dart';
 import 'home_screen.dart';
 

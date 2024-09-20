@@ -1,6 +1,6 @@
-import 'package:Cookie/components/WithdrawalList.dart';
-import 'package:Cookie/helpers/functions.dart';
-import 'package:Cookie/includes/CookieAppBar.dart';
+import 'package:rewards_converter/components/WithdrawalList.dart';
+import 'package:rewards_converter/helpers/functions.dart';
+import 'package:rewards_converter/includes/CustomAppBar.dart';
 import 'package:flutter/material.dart';
 import '../../components/DepositList.dart';
 import '../../helpers/dioUtil.dart';

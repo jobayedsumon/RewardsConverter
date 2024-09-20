@@ -1,7 +1,7 @@
-import 'package:Cookie/components/CustomerAvatar.dart';
-import 'package:Cookie/helpers/alerts.dart';
-import 'package:Cookie/helpers/dioUtil.dart';
-import 'package:Cookie/includes/CookieAppBar.dart';
+import 'package:rewards_converter/components/CustomerAvatar.dart';
+import 'package:rewards_converter/helpers/alerts.dart';
+import 'package:rewards_converter/helpers/dioUtil.dart';
+import 'package:rewards_converter/includes/CustomAppBar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

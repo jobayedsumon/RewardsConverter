@@ -1,7 +1,7 @@
-import 'package:Cookie/helpers/alerts.dart';
-import 'package:Cookie/helpers/constants.dart';
-import 'package:Cookie/helpers/functions.dart';
-import 'package:Cookie/screens/initial_screen.dart';
+import 'package:rewards_converter/helpers/alerts.dart';
+import 'package:rewards_converter/helpers/constants.dart';
+import 'package:rewards_converter/helpers/functions.dart';
+import 'package:rewards_converter/screens/initial_screen.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -75,7 +75,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   .size
                   .height * 0.5,
               child: Image(
-                image: AssetImage('assets/images/CookieLogoWhite.jpg'),
+                image: AssetImage('assets/images/logo.png'),
               ),
             ),
             Padding(

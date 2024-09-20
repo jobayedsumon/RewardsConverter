@@ -1,5 +1,5 @@
-import 'package:Cookie/helpers/constants.dart';
-import 'package:Cookie/helpers/functions.dart';
+import 'package:rewards_converter/helpers/constants.dart';
+import 'package:rewards_converter/helpers/functions.dart';
 import 'package:dio/dio.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

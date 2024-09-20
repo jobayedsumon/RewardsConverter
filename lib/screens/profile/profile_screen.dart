@@ -1,9 +1,9 @@
 import 'dart:convert';
 
-import 'package:Cookie/components/WithdrawalModal.dart';
-import 'package:Cookie/includes/CookieAppBar.dart';
-import 'package:Cookie/screens/profile/profile_info_screen.dart';
-import 'package:Cookie/screens/store_screen.dart';
+import 'package:rewards_converter/components/WithdrawalModal.dart';
+import 'package:rewards_converter/includes/CustomAppBar.dart';
+import 'package:rewards_converter/screens/profile/profile_info_screen.dart';
+import 'package:rewards_converter/screens/store_screen.dart';
 import 'package:flutter/material.dart';
 import '../../components/BannerAd.dart';
 import '../../components/CustomerAvatar.dart';

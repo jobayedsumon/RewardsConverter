@@ -1,4 +1,4 @@
-import 'package:Cookie/helpers/constants.dart';
+import 'package:rewards_converter/helpers/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:timeline_tile/timeline_tile.dart';

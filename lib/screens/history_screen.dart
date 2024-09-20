@@ -1,5 +1,5 @@
-import 'package:Cookie/helpers/functions.dart';
-import 'package:Cookie/includes/CookieAppBar.dart';
+import 'package:rewards_converter/helpers/functions.dart';
+import 'package:rewards_converter/includes/CustomAppBar.dart';
 import 'package:flutter/material.dart';
 import '../components/MultiSelect.dart';
 import '../components/Transaction.dart';

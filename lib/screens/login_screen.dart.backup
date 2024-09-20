@@ -1,6 +1,6 @@
-import 'package:Cookie/helpers/alerts.dart';
-import 'package:Cookie/helpers/constants.dart';
-import 'package:Cookie/helpers/dioSingleton.dart';
+import 'package:rewards_converter/helpers/alerts.dart';
+import 'package:rewards_converter/helpers/constants.dart';
+import 'package:rewards_converter/helpers/dioSingleton.dart';
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
@@ -132,7 +132,7 @@ class _LoginScreenState extends State<LoginScreen> {
               height: MediaQuery.of(context).size.height * 0.5,
               color: Colors.redAccent,
               child: Image(
-                image: AssetImage('assets/images/CookieLogo.png'),
+                image: AssetImage('assets/images/logo.png'),
               ),
             ),
             Container(

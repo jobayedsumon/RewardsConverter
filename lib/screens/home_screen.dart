@@ -1,13 +1,13 @@
 import 'dart:async';
 import 'dart:convert';
-import 'package:Cookie/components/BannerAd.dart';
-import 'package:Cookie/helpers/alerts.dart';
-import 'package:Cookie/helpers/constants.dart';
-import 'package:Cookie/helpers/dioUtil.dart';
+import 'package:rewards_converter/components/BannerAd.dart';
+import 'package:rewards_converter/helpers/alerts.dart';
+import 'package:rewards_converter/helpers/constants.dart';
+import 'package:rewards_converter/helpers/dioUtil.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../helpers/functions.dart';
-import '../includes/CookieAppBar.dart';
+import '../includes/CustomAppBar.dart';
 import 'package:unity_ads_plugin/unity_ads_plugin.dart';
 
 const _colDivider = SizedBox(height: 10);

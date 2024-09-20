@@ -1,11 +1,11 @@
-import 'package:Cookie/screens/initial_screen.dart';
-import 'package:Cookie/screens/login_screen.dart';
-import 'package:Cookie/screens/profile/profile_info_screen.dart';
-import 'package:Cookie/screens/transaction/transaction_details_screen.dart';
-import 'package:Cookie/screens/webview/about_us_screen.dart';
-import 'package:Cookie/screens/webview/contact_us_screen.dart';
-import 'package:Cookie/screens/webview/privacy_policy_screen.dart';
-import 'package:Cookie/screens/webview/terms_and_conditions_screen.dart';
+import 'package:rewards_converter/screens/initial_screen.dart';
+import 'package:rewards_converter/screens/login_screen.dart';
+import 'package:rewards_converter/screens/profile/profile_info_screen.dart';
+import 'package:rewards_converter/screens/transaction/transaction_details_screen.dart';
+import 'package:rewards_converter/screens/webview/about_us_screen.dart';
+import 'package:rewards_converter/screens/webview/contact_us_screen.dart';
+import 'package:rewards_converter/screens/webview/privacy_policy_screen.dart';
+import 'package:rewards_converter/screens/webview/terms_and_conditions_screen.dart';
 import 'package:flutter/material.dart';
 import 'helpers/functions.dart';
 

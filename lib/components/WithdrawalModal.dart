@@ -1,6 +1,6 @@
-import 'package:Cookie/helpers/alerts.dart';
-import 'package:Cookie/helpers/functions.dart';
-import 'package:Cookie/screens/initial_screen.dart';
+import 'package:rewards_converter/helpers/alerts.dart';
+import 'package:rewards_converter/helpers/functions.dart';
+import 'package:rewards_converter/screens/initial_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
