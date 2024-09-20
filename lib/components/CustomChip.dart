@@ -30,7 +30,7 @@ class CustomChip extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(top: 8.0),
                   child: Text(
-                    'Cookies',
+                    'Rewards',
                     style: TextStyle(
                         color: Colors.grey.shade700,
                         fontWeight: FontWeight.bold),
@@ -53,7 +53,7 @@ class CustomChip extends StatelessWidget {
                     ),
                   ),
                   child: Text(
-                    '${package.id} Cookies',
+                    '${package.id} Rewards',
                     style: TextStyle(
                         color: Colors.white, fontWeight: FontWeight.w500),
                   ),

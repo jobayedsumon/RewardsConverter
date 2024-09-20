@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rewards_converter/helpers/constants.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -36,7 +37,7 @@ class ContactUsScreen extends StatelessWidget {
       ),
     )
     ..loadRequest(
-        Uri.parse('https://cookiestreaming.com/contact-us?webView=true'));
+        Uri.parse('$webUrl/contact-us?webView=true'));
 
   @override
   Widget build(BuildContext context) {

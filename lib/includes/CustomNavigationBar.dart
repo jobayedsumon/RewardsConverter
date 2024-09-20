@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class CookieNavigationBar extends StatelessWidget {
+class CustomNavigationBar extends StatelessWidget {
   final int selectedIndex;
   final Function(int) onScreenChange;
 
-  const CookieNavigationBar(
+  const CustomNavigationBar(
       {Key? key, required this.selectedIndex, required this.onScreenChange})
       : super(key: key);
 

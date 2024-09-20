@@ -22,7 +22,7 @@ class _WithdrawalModalState extends State<WithdrawalModal> {
   bool isChecked = false;
   var dio = DioUtil.getInstance();
 
-  TextEditingController cookiesController = TextEditingController();
+  TextEditingController rewardsController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -68,9 +68,9 @@ class _WithdrawalModalState extends State<WithdrawalModal> {
               inputFormatters: <TextInputFormatter>[
                 FilteringTextInputFormatter.allow(RegExp(r'^(\d+)?\.?\d{0,2}'))
               ],
-              controller: cookiesController,
+              controller: rewardsController,
               decoration: InputDecoration(
-                labelText: 'Enter Cookies',
+                labelText: 'Enter Rewards',
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(50.0),
                 ),
@@ -128,19 +128,19 @@ class _WithdrawalModalState extends State<WithdrawalModal> {
   }
 
   void withdraw() {
-    if (cookiesController.text.isEmpty) {
-      showError(context, 'Please enter the number of cookies');
+    if (rewardsController.text.isEmpty) {
+      showError(context, 'Please enter the number of rewards');
     } else if (!isChecked) {
       showError(context, 'Please agree to the terms and conditions');
     } else {
-      double cookies = double.parse(cookiesController.text);
-      if (cookies >= 1000) {
-        if (cookies <= widget.profileData['balance']) {
+      double rewards = double.parse(rewardsController.text);
+      if (rewards >= 1000) {
+        if (rewards <= widget.profileData['balance']) {
           if (widget.profileData['payout_method'] != null &&
               widget.profileData['payout_id'] != null &&
               widget.profileData['beneficiary_name'] != null) {
             withdrawRequest(
-                cookies,
+                rewards,
                 widget.profileData['payout_method'],
                 widget.profileData['payout_id'],
                 widget.profileData['beneficiary_name']);
@@ -148,18 +148,18 @@ class _WithdrawalModalState extends State<WithdrawalModal> {
             showError(context, 'Please fully complete your payout info first');
           }
         } else {
-          showError(context, 'You do not have enough cookies');
+          showError(context, 'You do not have enough rewards');
         }
       } else {
-        showError(context, 'Minimum withdrawal is 1000 cookies');
+        showError(context, 'Minimum withdrawal is 1000 rewards');
       }
     }
   }
 
-  void withdrawRequest(cookies, payoutMethod, payoutId, beneficiaryName) {
+  void withdrawRequest(rewards, payoutMethod, payoutId, beneficiaryName) {
     try {
       dio.post('/transaction/withdraw', data: {
-        'cookies': cookies,
+        'rewards': rewards,
         'payout_method': payoutMethod,
         'payout_id': payoutId,
         'beneficiary_name': beneficiaryName,

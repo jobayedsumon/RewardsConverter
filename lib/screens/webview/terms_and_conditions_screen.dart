@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rewards_converter/helpers/constants.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class TermsAndConditionsScreen extends StatelessWidget {
@@ -24,7 +25,7 @@ class TermsAndConditionsScreen extends StatelessWidget {
       ),
     )
     ..loadRequest(Uri.parse(
-        'https://cookiestreaming.com/terms-and-conditions?webView=true'));
+        '$webUrl/terms-and-conditions?webView=true'));
 
   @override
   Widget build(BuildContext context) {

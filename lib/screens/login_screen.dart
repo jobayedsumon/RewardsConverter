@@ -86,7 +86,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   Text('Good to see you :)',
                       style: TextStyle(
                           fontSize: 35.0, fontWeight: FontWeight.bold)),
-                  Text('Connect your google account to get started with Cookie',
+                  Text('Connect your google account to get started with Rewards Converter Global',
                       style: TextStyle(fontSize: 16.0)),
                   SizedBox(height: 30.0),
                   Center(

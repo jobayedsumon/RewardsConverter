@@ -65,7 +65,7 @@ class _InitialScreenState extends State<InitialScreen> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: createScreenForIndex(_selectedIndex),
-      bottomNavigationBar: CookieNavigationBar(
+      bottomNavigationBar: CustomNavigationBar(
         selectedIndex: _selectedIndex,
         onScreenChange: onScreenChange,
       ),

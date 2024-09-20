@@ -124,7 +124,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CookieAppBar(balance: balance),
+      appBar: CustomAppBar(balance: balance),
       body: RefreshIndicator(
         onRefresh: () async {
           await getTransactions();

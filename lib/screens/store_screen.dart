@@ -21,7 +21,7 @@ class StoreScreen extends StatefulWidget {
 }
 
 class _StoreScreenState extends State<StoreScreen> {
-  List cookiePackages = [];
+  List rewardsPackages = [];
   var dio = DioUtil.getInstance();
   late StreamSubscription<dynamic> _subscription;
   Set<String> skuIds = {
@@ -46,7 +46,7 @@ class _StoreScreenState extends State<StoreScreen> {
       products.sort((a, b) => int.parse(a.id).compareTo(int.parse(b.id)));
 
       setState(() {
-        cookiePackages = products;
+        rewardsPackages = products;
       });
     }
   }
@@ -54,7 +54,7 @@ class _StoreScreenState extends State<StoreScreen> {
   Future verifyAndDeposit(PurchaseDetails purchaseDetails, quantity) async {
     try {
       dio.post('/transaction/deposit', data: {
-        'cookies': purchaseDetails.productID,
+        'rewards': purchaseDetails.productID,
         'quantity': quantity,
         'purchase_id': purchaseDetails.purchaseID,
         'purchase_token':
@@ -108,7 +108,7 @@ class _StoreScreenState extends State<StoreScreen> {
           });
           ScaffoldMessenger.of(context).showSnackBar(SnackBar(
             content: Text(
-                "Purchase complete. Please stay on this page while we verify and deposit your cookies."),
+                "Purchase complete. Please stay on this page while we verify and deposit your rewards."),
             duration: Duration(milliseconds: 2000),
           ));
 
@@ -168,7 +168,7 @@ class _StoreScreenState extends State<StoreScreen> {
             ),
           )
         : Scaffold(
-            appBar: CookieAppBar(
+            appBar: CustomAppBar(
                 balance: balance, showBalance: !widget.fromProfile),
             body: SafeArea(
               child: SingleChildScrollView(
@@ -180,7 +180,7 @@ class _StoreScreenState extends State<StoreScreen> {
                           child: Column(
                         children: [
                           Text(
-                            'PURCHASE COOKIES',
+                            'PURCHASE REWARDS',
                             style: TextStyle(
                               color: Colors.red,
                               fontSize: 25.0,
@@ -188,8 +188,8 @@ class _StoreScreenState extends State<StoreScreen> {
                             ),
                           ),
                           Column(
-                            children: cookiePackages
-                                .take((cookiePackages.length ~/ 2))
+                            children: rewardsPackages
+                                .take((rewardsPackages.length ~/ 2))
                                 .map(
                                   (package) => CustomChip(package: package),
                                 )
@@ -205,8 +205,8 @@ class _StoreScreenState extends State<StoreScreen> {
                             style: TextStyle(color: Colors.red, fontSize: 12.0),
                           ),
                           Column(
-                            children: cookiePackages
-                                .skip((cookiePackages.length ~/ 2))
+                            children: rewardsPackages
+                                .skip((rewardsPackages.length ~/ 2))
                                 .map((package) => CustomChip(package: package))
                                 .toList(),
                           ),

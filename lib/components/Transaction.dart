@@ -16,7 +16,7 @@ class Transaction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     int status = transaction['status'];
-    double amount = transaction['cookies'] / 100;
+    double amount = transaction['rewards'] / 100;
 
     return MaterialButton(
       splashColor: Colors.transparent,

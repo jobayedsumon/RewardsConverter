@@ -10,17 +10,17 @@ import 'package:flutter/material.dart';
 import 'helpers/functions.dart';
 
 void main() async {
-  runApp(const CookieApp());
+  runApp(const RewardsConverterApp());
 }
 
-class CookieApp extends StatefulWidget {
-  const CookieApp({super.key});
+class RewardsConverterApp extends StatefulWidget {
+  const RewardsConverterApp({super.key});
 
   @override
-  State<CookieApp> createState() => _CookieAppState();
+  State<RewardsConverterApp> createState() => _RewardsConverterAppState();
 }
 
-class _CookieAppState extends State<CookieApp> {
+class _RewardsConverterAppState extends State<RewardsConverterApp> {
   @override
   initState() {
     super.initState();
@@ -30,7 +30,7 @@ class _CookieAppState extends State<CookieApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Cookie - reward converter',
+      title: 'Rewards Converter Global',
       themeMode: ThemeMode.light,
       theme: ThemeData(colorSchemeSeed: Colors.red, useMaterial3: true),
       routes: {

@@ -144,7 +144,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CookieAppBar(balance: balance),
+      appBar: CustomAppBar(balance: balance),
       body: Column(children: [
         Padding(
           padding: const EdgeInsets.all(10.0),
@@ -166,13 +166,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     _colDivider,
                     Align(
                         alignment: Alignment.topLeft,
-                        child: Text('1. Go to Store Section and Buy Cookies')),
+                        child: Text('1. Go to Store Section and Buy Rewards')),
                     _colDivider,
                     Text(
-                        '2. For Redeem Cookies, Go to Profile section and Click on Withdraw.'),
+                        '2. For Redeem Rewards, Go to Profile section and Click on Withdraw.'),
                     _colDivider,
                     Text(
-                        '3. In the Withdraw Page, enter cookies and click on Withdraw button.'),
+                        '3. In the Withdraw Page, enter rewards and click on Withdraw button.'),
                     _colDivider,
                     _colDivider,
                     Text('All Payments will be completed within 72 hours.'),

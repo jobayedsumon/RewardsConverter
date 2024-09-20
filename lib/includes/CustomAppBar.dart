@@ -1,21 +1,21 @@
 import 'package:rewards_converter/helpers/functions.dart';
 import 'package:flutter/material.dart';
 
-class CookieAppBar extends StatefulWidget implements PreferredSizeWidget {
+class CustomAppBar extends StatefulWidget implements PreferredSizeWidget {
   final double balance;
   final bool showBalance;
 
-  const CookieAppBar({Key? key, this.balance = 0.0, this.showBalance = true})
+  const CustomAppBar({Key? key, this.balance = 0.0, this.showBalance = true})
       : super(key: key);
 
   @override
-  State<CookieAppBar> createState() => _CookieAppBarState();
+  State<CustomAppBar> createState() => _CustomAppBarState();
 
   @override
   Size get preferredSize => Size.fromHeight(kToolbarHeight);
 }
 
-class _CookieAppBarState extends State<CookieAppBar> {
+class _CustomAppBarState extends State<CustomAppBar> {
   @override
   Widget build(BuildContext context) {
     return widget.showBalance

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rewards_converter/helpers/constants.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class AboutUsScreen extends StatelessWidget {
@@ -24,7 +25,7 @@ class AboutUsScreen extends StatelessWidget {
       ),
     )
     ..loadRequest(
-        Uri.parse('https://cookiestreaming.com/about-us?webView=true'));
+        Uri.parse('$webUrl/about-us?webView=true'));
 
   @override
   Widget build(BuildContext context) {

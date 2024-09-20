@@ -1,4 +1,5 @@
 const baseUrl = 'https://rewardsconverter.online/api';
+const webUrl = 'https://rewardsconverter.online';
 
 const TransactionType = {
   1: 'Deposit',

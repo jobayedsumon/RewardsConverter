@@ -76,7 +76,7 @@ class _ProfileInfoScreenState extends State<ProfileInfoScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: CookieAppBar(showBalance: false),
+      appBar: CustomAppBar(showBalance: false),
       body: SafeArea(
         child: Column(
           children: [

@@ -44,7 +44,7 @@ class TransactionDetailsScreen extends StatelessWidget {
                                   ),
                                 ),
                                 Text(
-                                  '\$${(transaction['cookies'] / 100).toStringAsFixed(2)}',
+                                  '\$${(transaction['rewards'] / 100).toStringAsFixed(2)}',
                                   style: TextStyle(
                                     fontSize: 16.0,
                                     fontWeight: FontWeight.bold,

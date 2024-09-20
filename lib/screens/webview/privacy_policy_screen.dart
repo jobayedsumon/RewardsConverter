@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rewards_converter/helpers/constants.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class PrivacyPolicyScreen extends StatelessWidget {
@@ -24,7 +25,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
       ),
     )
     ..loadRequest(
-        Uri.parse('https://cookiestreaming.com/privacy-policy?webView=true'));
+        Uri.parse('$webUrl/privacy-policy?webView=true'));
 
   @override
   Widget build(BuildContext context) {

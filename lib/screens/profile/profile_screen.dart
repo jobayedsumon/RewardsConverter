@@ -69,7 +69,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CookieAppBar(balance: balance),
+      appBar: CustomAppBar(balance: balance),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(10.0),
@@ -134,7 +134,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             Column(
                               children: [
                                 Text(
-                                  '100 Cookies ~ 1 USD',
+                                  '100 Rewards ~ 1 USD',
                                   style: TextStyle(
                                     fontSize: 12.0,
                                     color: Colors.grey.shade800,
