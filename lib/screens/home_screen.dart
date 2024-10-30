@@ -35,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
     super.initState();
     // _loadLastClickTime();
 
-    initializeAd();
+    // initializeAd();
 
     getBalance().then((value) {
       setState(() {
@@ -53,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
       }
     });
 
-    _loadRewardedVideoAd();
+    // _loadRewardedVideoAd();
   }
 
   void _rewardUser() async {
